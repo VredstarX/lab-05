@@ -6,12 +6,7 @@
 - **CCID:** `doroy`
 
 ## References and Resources
-
-List any resources used here, or simply put `N/A` if not applicable.
+https://firebase.google.com/docs/firestore/manage-data/delete-data
 
 ## Verbal Collaboration
 
-| Student Name | CCID     |
-| ------------ | -------- |
-| `<example1>` | `<CCID>` |
-| `<example2>` | `<CCID>` |
