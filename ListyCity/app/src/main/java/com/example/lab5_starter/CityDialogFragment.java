@@ -62,20 +62,30 @@ public class CityDialogFragment extends DialogFragment {
             city = null;}
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        return builder
+        builder
                 .setView(view)
                 .setTitle("City Details")
                 .setNegativeButton("Cancel", null)
                 .setPositiveButton("Continue", (dialog, which) -> {
                     String title = editMovieName.getText().toString();
                     String year = editMovieYear.getText().toString();
+
                     if (Objects.equals(tag, "City Details")) {
                         listener.updateCity(city, title, year);
                     } else {
                         listener.addCity(new City(title, year));
                     }
-                })
-                .create();
+                });
+
+        if (Objects.equals(tag, "City Details") && city != null) {
+            builder.setNeutralButton("Delete", (dialogInterface, whichButton) -> {
+                listener.deleteCity(city);
+            });
+        }
+
+        return builder.create();
+
     }
+
 
 }
