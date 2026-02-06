@@ -17,6 +17,7 @@ public class CityDialogFragment extends DialogFragment {
     interface CityDialogListener {
         void updateCity(City city, String title, String year);
         void addCity(City city);
+        void deleteCity(City city);
     }
     private CityDialogListener listener;
 
@@ -76,4 +77,5 @@ public class CityDialogFragment extends DialogFragment {
                 })
                 .create();
     }
+
 }
